@@ -1,0 +1,70 @@
+// This is your sanitized Prisma schema file.
+// Database details and business logic have been removed for public repository use.
+
+// Prisma Client configuration
+generator client {
+  provider = "prisma-client-js"
+  output   = "./db"
+}
+
+// Database connection
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User information and relationships
+model user {
+  // Stores user-related data and links to various user activities
+}
+
+// Agent management
+model agent {
+  // Represents different agents handling campaigns
+}
+
+// Campaign-related data
+model campaign {
+  // Defines campaigns linked to agents and datasets
+}
+
+// Dataset tracking
+model dataSetTrack {
+  // Tracks different datasets for labeling
+}
+
+// Dataset options for labeling
+model dataSetOption {
+  // Defines labeling options for datasets
+}
+
+// Dataset information
+model dataSet {
+  // Represents data entries used in labeling campaigns
+}
+
+// Data labeling results
+model dataLabelingResult {
+  // Stores results from data labeling activities
+}
+
+// User history of labeling activities
+model userDataLabelingHistory {
+  // Tracks user contributions to data labeling
+}
+
+enum DatasetType {
+  // Defines dataset types
+}
+
+enum InputOptionType {
+  // Represents input options for labeling
+}
+
+enum DataSetStatus {
+  // Manages dataset status values
+}
+
+enum AgentType {
+  // Defines different agent types
+}
