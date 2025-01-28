@@ -18,6 +18,30 @@ model user {
   // Stores user-related data and links to various user activities
 }
 
+// Model for quests within the system
+model quest {
+  // Represents quests available for users
+}
+
+// Model for individual tasks in a quest
+model task {
+  // Represents tasks associated with quests
+}
+
+// Model for tracking a user's quest progress
+model userQuestStatus {
+  // Tracks user progress in quests
+}
+
+// Model for tracking a user's task progress
+model userTaskStatus {
+  // Tracks user progress in tasks
+}
+
+// Model for tracking a user's task history
+model userTaskHistory {
+  // Records completed tasks for users
+}
 // Agent management
 model agent {
   // Represents different agents handling campaigns
@@ -52,6 +76,17 @@ model dataLabelingResult {
 model userDataLabelingHistory {
   // Tracks user contributions to data labeling
 }
+
+// Enumeration defining task types
+enum TaskType {
+  // Defines task types
+}
+
+// Enumeration defining task content types
+enum TaskContentType {
+  // Specifies task content types
+}
+
 
 enum DatasetType {
   // Defines dataset types

@@ -23,6 +23,9 @@ export class UserService {
   // Retrieves user's inventory
   public async getInventory(userId: string) {}
 
+  // Retrieves quest completion status for a user
+  public async getUserQuestStatus(userId: string) {}
+
   // Links a user with a referral code
   public async patchUserReference(userId: string, referralCode: string) {}
 

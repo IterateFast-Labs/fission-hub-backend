@@ -25,23 +25,27 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   // Retrieves the authenticated user's information
-  @Get('/myInfo')
+  @Get('')
   async getMyInfo(@User() user: AuthUser) {}
 
   // Retrieves the referral information of the authenticated user
-  @Get('/referral')
+  @Get('')
   async getReferral(@User() user: AuthUser, @Query() query: PaginationDto) {}
 
   // Retrieves the user's point balance
-  @Get('/myPoint')
+  @Get('')
   async getMyPoint(@User() user: AuthUser) {}
 
   // Retrieves the user's inventory
-  @Get('inventory')
+  @Get('')
   async getInventory(@User() user: AuthUser) {}
 
+  // Retrieves the quest status for a user
+  @Get('')
+  public async getUserQuestStatus(@User() user: AuthUser) {}
+
   // Updates the user's referral code
-  @Patch('/patchReferral')
+  @Patch('')
   @Throttle(1, 3)
   async patchReferral(
     @User() user: AuthUser,
@@ -49,7 +53,7 @@ export class UserController {
   ) {}
 
   // Updates the user's nickname
-  @Patch('/nickname')
+  @Patch('')
   public async patchNickname(
     @User() user: AuthUser,
     @Body() patchUserNicknameDto: PatchUserNicknameDto,
