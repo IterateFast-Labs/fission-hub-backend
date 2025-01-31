@@ -18,6 +18,11 @@ model user {
   // Stores user-related data and links to various user activities
 }
 
+// Model for tracking user referrals
+model userReference {
+  // Stores information about user referral relationships
+}
+
 // Model for quests within the system
 model quest {
   // Represents quests available for users
