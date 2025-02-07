@@ -46,4 +46,22 @@ export class QuestController {
     @Param('questId') questId: string,
     @Param('taskId') taskId: string,
   ) {}
+
+  // Retrieves the current check-in status of the user
+  @Get('')
+  @UseGuards(AuthGuard)
+  public async getCheckIn(@User() user: AuthUser) {}
+
+  // Retrieves the user's check-in history
+  @Get('')
+  @UseGuards(AuthGuard)
+  public async getCheckInHistory(@User() user: AuthUser) {}
+
+  // Handles user check-in actions
+  @Post('')
+  @UseGuards(AuthGuard)
+  async checkIn(
+    @User() user: AuthUser,
+    @Body() postCheckInDto: PostCheckInDto,
+  ) {}
 }

@@ -18,11 +18,6 @@ model user {
   // Stores user-related data and links to various user activities
 }
 
-// Model for tracking user referrals
-model userReference {
-  // Stores information about user referral relationships
-}
-
 // Model for quests within the system
 model quest {
   // Represents quests available for users
@@ -47,6 +42,22 @@ model userTaskStatus {
 model userTaskHistory {
   // Records completed tasks for users
 }
+
+// Model for tracking in-game task history
+model userInGameTaskHistory {
+  // Stores user progress on daily in-game tasks
+}
+
+// Model for check-in events
+model checkInEvent {
+  // Represents scheduled check-in events with rewards
+}
+
+// Model for tracking user check-in history
+model userCheckInHistory {
+  // Records user participation in check-in events
+}
+
 // Agent management
 model agent {
   // Represents different agents handling campaigns
