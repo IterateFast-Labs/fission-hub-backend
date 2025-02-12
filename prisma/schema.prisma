@@ -68,6 +68,11 @@ model campaign {
   // Defines campaigns linked to agents and datasets
 }
 
+// Model for tracking agent status
+model status {
+  // Stores status information related to an agent
+}
+
 // Dataset tracking
 model dataSetTrack {
   // Tracks different datasets for labeling
